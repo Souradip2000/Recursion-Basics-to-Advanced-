@@ -1,9 +1,8 @@
 Recursion:
   When a function calls itself until a specified condition is met.
 
-Function will call itself
-
-Well defined base case, other function will keep calling itself.
+    -->  Function will call itself
+    -->  Well defined base case, other function will keep calling itself.
 
 Segmentation fault / Stack overflow error:
   No proper base case specified.
@@ -11,3 +10,8 @@ Segmentation fault / Stack overflow error:
   Unfinished function calls pile up in stack.
   Stack memory gets filled ( limit depends on compiler )
   Throws error
+
+
+Recursion Tree: 
+  Pictorially represent the number of times the function has been recursively called.
+  Then use arrows to show which function has been called after which one and then the return path of the functions too.
