@@ -1,3 +1,10 @@
 Function will call itself
 
 Well defined base case, other function will keep calling itself.
+
+Segmentation fault / Stack overflow error:
+  No proper base case specified.
+  Function keeps calling itself recursively.
+  Unfinished function calls pile up in stack.
+  Stack memory gets filled ( limit depends on compiler )
+  Throws error
