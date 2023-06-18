@@ -1,3 +1,6 @@
+Recursion:
+  When a function calls itself until a specified condition is met.
+
 Function will call itself
 
 Well defined base case, other function will keep calling itself.
