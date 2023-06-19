@@ -67,3 +67,25 @@ int main()
     printN(3,1);
     return 0;
 }
+
+
+
+// Print numbers from 1 to N using backtracking
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void printN(int i)
+{
+    if(i<1)
+        return;
+    printN(i-1);
+    cout<<i<<endl;
+}
+
+int main()
+{
+    printN(3);
+    return 0;
+}
+
