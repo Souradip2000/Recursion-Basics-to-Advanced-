@@ -46,3 +46,24 @@ int main()
     return 0;
 }
 
+
+// Print numbers from N to 1 using recursion
+
+// Print numbers from N to 1
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void printN(int i,int n)
+{
+    if(i<n)
+        return;
+    cout<<i<<endl;
+    printN(i-1,n);
+}
+
+int main()
+{
+    printN(3,1);
+    return 0;
+}
