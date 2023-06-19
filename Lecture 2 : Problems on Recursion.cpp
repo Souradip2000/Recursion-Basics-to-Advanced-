@@ -22,3 +22,27 @@ int main()
     int a=printName(s);
     return 0;
 }
+
+
+// second approach
+
+// time complexity : O(n)
+// stack/space complexity : O(n)
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void printN(int i,int n)
+{
+    if(i>n)
+        return;
+    cout<<"Raj"<<endl;
+    printN(i+1,n);
+}
+
+int main()
+{
+    printN(1,3);
+    return 0;
+}
+
