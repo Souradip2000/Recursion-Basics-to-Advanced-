@@ -43,3 +43,24 @@ int main()
     cout<<printSum(3);
     return 0;
 }
+
+
+// Program to calculate the factorial of N using functional recursion
+
+#include <iostream>
+using namespace std;
+
+int printFact(int n)
+{
+    if(n==0)          // base case
+    {
+        return 1;
+    }
+    return n*printFact(n-1);
+}
+
+int main()
+{
+    cout<<printFact(4);
+    return 0;
+}
