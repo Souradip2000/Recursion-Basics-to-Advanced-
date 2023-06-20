@@ -1,5 +1,8 @@
 // Program to print the sum of the first N numbers using parameterised recursion
 
+// time complexity: O(n)
+// stack/ space complexity : O(n)
+
 #include <iostream>
 using namespace std;
 
