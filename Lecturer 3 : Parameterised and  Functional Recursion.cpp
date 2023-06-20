@@ -64,3 +64,26 @@ int main()
     cout<<printFact(4);
     return 0;
 }
+
+
+
+// Program to calculate the factorial of N using parameterised recursion
+
+#include <iostream>
+using namespace std;
+
+void printFact(int n, int fact)
+{
+    if(n==0)
+    {
+        cout<<fact;
+        return;
+    }
+    printFact(n-1,fact*n);
+}
+
+int main()
+{
+    printFact(5,1);
+    return 0;
+}
