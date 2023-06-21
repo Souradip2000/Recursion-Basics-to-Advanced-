@@ -1,1 +1,3 @@
 Write a return statement for every functional recursion call. Understand using the recursion tree. Without return statement the recursion tree wouldn't be possible.
+
+In case of multiple recursion calls within the same function, the first recursion call will be completed and then the second one will start executing.
