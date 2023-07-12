@@ -19,6 +19,9 @@ Ans : it is a contiguous / non-contiguous sequence which "follows the order".
 
 
 // Program to print all the subsequences of an array
+
+// Time complexity : O(2^n)                 -->             There are two choices for each of the n elements of the array. 2 2 2. Thus O(2^n).
+// Stack space complexity : O(n)             -->            This is because at a time there won't be more than n recursion calls waiting in the stack
 #include <bits/stdc++.h>
 using namespace std;
 
