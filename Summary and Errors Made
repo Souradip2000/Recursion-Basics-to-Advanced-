@@ -15,3 +15,8 @@ Difference between functional and parameterised recursioin:
     -    functional recursion : function returns a value and ans comes after all the functions return 
     -    parameterised recursion : output is displayed when the base case is reached
 [ Draw the recursion tree for printing the factorial of n numbers using both these methods. ]
+
+
+
+Simply write the code of the pattern you observe.                 Recursion will be formed.
+Also just draw the recursion tree according to the pattern.
