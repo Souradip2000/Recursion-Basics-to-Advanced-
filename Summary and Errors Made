@@ -4,3 +4,4 @@ In case of multiple recursion calls within the same function, the first recursio
 
 Time complexity of code to find nth fibonacci term using recursion is O( 2^n ).
     --> this is because in every recursion call, the problem is split into 2 halves, and in the recursion tree we can see that at each level has 2^n calls.
+Draw the recursion tree of Fibonacci series to understand its time complexity.
