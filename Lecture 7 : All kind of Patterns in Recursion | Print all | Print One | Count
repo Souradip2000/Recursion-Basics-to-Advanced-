@@ -1,1 +1,41 @@
 hello
+#include <bits/stdc++.h>
+using namespace std;
+
+void printSub(int ind, vector<int> &ds, int arr[], int n)
+{
+    // base case
+    if(ind>=n)
+    {
+        int sum=0;
+        for(int i: ds)
+            sum+=i;
+        if(sum==2)
+        {    
+            for(int i: ds)
+                cout<<i<<" ";
+            cout<<endl;
+        }
+        //cout<<endl;
+        
+        return;
+    }
+    
+    // take element
+    ds.push_back(arr[ind]);
+    printSub(ind+1, ds, arr, 3);
+    
+    // not-take element
+    ds.pop_back();
+    printSub(ind+1, ds, arr,3);
+    
+}
+
+int main()
+{
+    int arr[3]={1,2,1};
+    vector<int> ds;
+    
+    printSub(0, ds, arr, 3);
+    return 0;
+}
