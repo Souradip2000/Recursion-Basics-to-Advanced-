@@ -15,3 +15,42 @@ Ans : it is a contiguous / non-contiguous sequence which "follows the order".
                     3 2
                     3 1 2                                   are all subsequences. { } is a subsequnce too because we've not selected any element and they're in order.
 */
+
+
+
+// Program to print all the subsequences of an array
+#include <bits/stdc++.h>
+using namespace std;
+
+void printSub(int ind, vector<int> &ds, int arr[], int n)
+{
+    // base case
+    if(ind>=n)
+    {
+        if(ds.size()==0)
+            cout<<"{ }";
+            
+        for(int i: ds)
+            cout<<i<<" ";
+        cout<<endl;
+        
+        return;
+    }
+    
+    // take element
+    ds.push_back(arr[ind]);
+    printSub(ind+1, ds, arr, 3);
+    
+    // not-take element
+    ds.pop_back();
+    printSub(ind+1, ds, arr,3);
+}
+
+int main()
+{
+    int arr[3]={3,1,2};
+    vector<int> ds;
+    
+    printSub(0, ds, arr, 3);
+    return 0;
+}
