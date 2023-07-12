@@ -8,4 +8,4 @@ Draw the recursion tree of Fibonacci series to understand its time complexity.
 
 
 
-In recursion you can declare variables globally.
+Make use of global variables to maintain count inside recursive function.
