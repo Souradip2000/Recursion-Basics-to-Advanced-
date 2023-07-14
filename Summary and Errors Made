@@ -20,3 +20,6 @@ Difference between functional and parameterised recursioin:
 
 Simply write the code of the pattern you observe.                 Recursion will be formed.
 Also just draw the recursion tree according to the pattern.
+
+
+When you have to print only one subsequence, then print the first subsequence satisfying the conditons and the stop furthur recursion calls.
