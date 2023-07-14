@@ -50,6 +50,8 @@ int main()
 
 // Program to print any one subsequence whose sum equals to the target sum
 
+// done using a secondary variable
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -92,3 +94,60 @@ int main()
     f(0, arr, 3, sub, 2);
     return 0;
 }
+
+
+
+
+
+
+// Program to print any one subsequence whose sum equals to the target sum
+// done using suggested method : Stop the recursion after one subsequence, satisfying all conditions, is found and printed
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+bool f(int index, int arr[], int n, vector<int>& sub, int target)
+{
+    // base case
+    if(index>=n)
+    {
+        int sum=0;
+        for(int i: sub)
+            sum+=i;
+        
+        if(sum==target)
+        {
+            for(int i: sub)
+                cout<<i<<" ";
+            
+            return true;
+        }
+        
+        else 
+            return false;
+    }
+    
+    // take element
+    sub.push_back(arr[index]);
+    if(f(index+1, arr, 3, sub, 2))
+        return true;
+    
+    // not-take element
+    sub.pop_back();
+    if(f(index+1, arr, 3, sub, 2))
+        return true;
+        
+    return false;
+}
+
+int main()
+{
+    int arr[3]={1,2,1};
+    vector<int> sub;
+    f(0, arr, 3, sub, 2);
+    return 0;
+}
+
+
+
