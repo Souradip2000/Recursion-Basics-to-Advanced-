@@ -151,3 +151,52 @@ int main()
 
 
 
+// the above code with sum variable as a parameter
+// helps avoid running a for loop inside the function
+
+// Program to print any one subsequence whose sum equals to the target sum
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+bool f(int index, int arr[], int n, vector<int>& sub, int target, int sum)
+{
+    // base case
+    if(index>=n)
+    {
+        if(sum==target)
+        {
+            for(int i: sub)
+                cout<<i<<" ";
+            
+            return true;
+        }
+        
+        else 
+            return false;
+    }
+    
+    // take element
+    sub.push_back(arr[index]);
+    sum+=arr[index];
+    if(f(index+1, arr, 3, sub, 2, sum))
+        return true;
+    
+    // not-take element
+    sub.pop_back();
+    sum-=arr[index];
+    if(f(index+1, arr, 3, sub, 2, sum))
+        return true;
+        
+    return false;
+}
+
+int main()
+{
+    int arr[3]={1,2,1};
+    vector<int> sub;
+    f(0, arr, 3, sub, 2, 0);
+    return 0;
+}
+
