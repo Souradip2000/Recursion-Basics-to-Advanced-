@@ -16,5 +16,12 @@ Steps:-
 
 Rules to select the pivot element:
     Any element can be selected as the pivot element.
-    
+    We select the first element as the pivot element.
+
+
+1. Select the pivot element.
+2. Find the right place to put the pivot element.
+3. Put the smaller elements to the left of the pivot and the larger to the right.
+
+It is a divide and conquer algorithm.
 */
