@@ -25,3 +25,46 @@ Rules to select the pivot element:
 
 It is a divide and conquer algorithm.
 */
+
+
+
+// time complexity : O(nlogn)        n because of the i and j pointers traversing the entire length of the array
+//                                   log n because the similar to as in merge sort the array is being split up into two parts in every recursion step
+
+// space complexity : O(1)           recursion stack space is used but it is not taken into account as no temporary array is used and the sorting takes place on the original array only
+
+
+// Code :-
+#include <bits/stdc++.h> 
+int pInd(vector<int>& arr, int low, int high)
+{
+    int pivotElement=arr[low];
+    int i=low;
+    int j=high;
+    while(i<j)
+    {
+        while(arr[i]<=pivotElement && i<=high-1)
+            i++;
+        while(arr[j]>pivotElement && j>=low+1)
+            j--;
+        if(i<j)
+            swap(arr[i], arr[j]);
+    }
+    swap(arr[low],arr[j]);
+    return j;
+}
+void qs(vector<int>& arr, int low, int high)
+{
+    if(low<high)
+    {
+        int partitionIndex = pInd(arr, low, high);
+        qs(arr, low, partitionIndex-1);
+        qs(arr, partitionIndex+1, high);
+    }
+}
+vector<int> quickSort(vector<int> arr)
+{
+    qs(arr,0,arr.size()-1);
+    return arr;
+}
+
