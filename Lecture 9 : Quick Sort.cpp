@@ -117,3 +117,51 @@ int main()
     return 0;
 }
 
+
+
+
+
+
+
+
+// Code to sort the array in Descending order : 
+
+#include <bits/stdc++.h>
+using namespace std;
+int partionIndex(vector<int>& arr, int low, int high)
+{
+    int pivotElement = arr[low];
+    int i=low;
+    int j=high;
+    while(i<j)
+    {
+        while(arr[i]>=pivotElement && i<=high-1)        // change is made here
+            i++;
+        while(arr[j]<pivotElement && j>=low+1)          // change is made here
+            j--;
+        if(i<j)
+            swap(arr[i], arr[j]);
+    }
+    swap(arr[low], arr[j]);
+    return j;
+}
+void quickSort(vector<int>& arr, int low, int high)
+{
+    if(low<high)
+    {
+        int pInd= partionIndex(arr, low, high);
+        quickSort(arr, low, pInd-1);
+        quickSort(arr, pInd+1, high);        
+    }
+}
+int main()
+{
+    vector<int> arr{4,6,2,5,7,9,1,3};
+    
+    quickSort(arr, 0, arr.size()-1);
+    
+    for(int i: arr)
+        cout<<i<<" ";
+    
+    return 0;
+}
