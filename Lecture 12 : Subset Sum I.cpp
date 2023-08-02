@@ -1,3 +1,5 @@
+// Space complexity : O(2^n)  --> because total 2^n subsets exist for a set of n elements; each of their sum needs to be added 
+
 //{ Driver Code Starts
 #include<bits/stdc++.h> 
 using namespace std; 
